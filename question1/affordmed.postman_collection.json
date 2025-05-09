@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "c09741d4-75d8-481e-ae4c-51ff6da9d0ef",
+		"name": "affordmed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33322293"
+	},
+	"item": [
+		{
+			"name": "test server",
+			"item": [
+				{
+					"name": "auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aditya.2226cs1066@kiet.edu\",\r\n    \"name\": \"Aditya Madwal\",\r\n    \"rollNo\": \"2200290120011\",\r\n    \"accessCode\": \"SxVeja\",\r\n    \"clientID\": \"ba775e93-70f9-4707-be8b-aa2efdf0594c\",\r\n    \"clientSecret\": \"sAvbvPGEnZbspAQB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.244.56.144/evaluation-service/auth",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"evaluation-service",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registeration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aditya.2226cs1066@kiet.edu\",\r\n    \"name\": \"Aditya Madwal\",\r\n    \"mobileNo\":\"8130492789\",\r\n    \"githubUsername\": \"aditya-madwal\",\r\n    \"rollNo\": \"2200290120011\",\r\n    \"collegeName\":\"KIET group of institutions\",\r\n    \"accessCode\": \"SxVeja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.244.56.144/evaluation-service/register",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"evaluation-service",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "even numbers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzQ2Nzk5NTQ3LCJpYXQiOjE3NDY3OTkyNDcsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImJhNzc1ZTkzLTcwZjktNDcwNy1iZThiLWFhMmVmZGYwNTk0YyIsInN1YiI6ImFkaXR5YS4yMjI2Y3MxMDY2QGtpZXQuZWR1In0sImVtYWlsIjoiYWRpdHlhLjIyMjZjczEwNjZAa2lldC5lZHUiLCJuYW1lIjoiYWRpdHlhIG1hZHdhbCIsInJvbGxObyI6IjIyMDAyOTAxMjAwMTEiLCJhY2Nlc3NDb2RlIjoiU3hWZWphIiwiY2xpZW50SUQiOiJiYTc3NWU5My03MGY5LTQ3MDctYmU4Yi1hYTJlZmRmMDU5NGMiLCJjbGllbnRTZWNyZXQiOiJzQXZidlBHRW5aYnNwQVFCIn0.SacO13Gw3rxANOzLaSdkzq50jye46ymt5quYCmhfHaE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://20.244.56.144/evaluation-service/primes",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"evaluation-service",
+								"primes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "number api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/numbers/e",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"numbers",
+						"e"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
